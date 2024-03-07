@@ -5,7 +5,7 @@ import { styles } from "./styles"
 
 export function Ingredients(){
     return(
-        <ScrollView horizontal contentContainerStyle={styles.container}>
+        <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
             {Array.from({length: 100}).map((item, index) => (
                 <Ingredient key={index}/>
             ))}
