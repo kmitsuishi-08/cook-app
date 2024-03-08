@@ -7,19 +7,9 @@ export type IngredientsProps = {
     selected?: boolean
 }
 
-// export function Ingredient({name, image, selected = false, ...rest}: IngredientsProps & PressableProps){
-//     return(
-//         <Pressable style={styles.container} {...rest}>
-//             <Image source={require("@/assets/tomato.png")} style={styles.image}/>
-//             <Text style={styles.title}>Maçã</Text>
-//         </Pressable>
-//     )
-// }
-
-
-export function Ingredient(){
+export function Ingredient({name, image, selected = false, ...rest}: IngredientsProps & PressableProps){
     return(
-        <Pressable style={styles.container}>
+        <Pressable style={[styles.container, selected && styles.selected]} {...rest}>
             <Image source={require("@/assets/tomato.png")} style={styles.image}/>
             <Text style={styles.title}>Maçã</Text>
         </Pressable>
